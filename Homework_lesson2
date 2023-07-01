@@ -1,0 +1,101 @@
+# Задание 1: Реализуйте метод, который запрашивает у пользователя ввод дробного числа (типа float),
+# и возвращает введенное значение. Ввод текста вместо числа не должно приводить к падению приложения,
+# вместо этого, необходимо повторно запросить у пользователя ввод данных.
+# def is_number(num):
+#     try:
+#         num == float(num)
+#         try:
+#             num == int(num)
+#             return f'ERROR: The value you entered is integer, not float. Try again!'
+#         except:
+#             return True
+#     except:
+#         return f'ERROR: The value you entered is string, not float. Try again!'
+# print('••• Program initialization •••\nPlease follow the instructions!')
+# num = input('Enter value float type: ')
+# while is_number(num) != True:
+#     print(f'{is_number(num)}')
+#     num = input('Enter value float type: ')
+# print(f'Congratulations, you entered a number float type: {num}')
+
+# Задание 2: Если необходимо, исправьте данный код:
+# JAVA исходник:
+##########################################################
+# try {
+#    int d = 0;
+#    double catchedRes1 = intArray[8] / d;
+#    System.out.println("catchedRes1 = " + catchedRes1);
+# } catch (ArithmeticException e) {
+#    System.out.println("Catching exception: " + e);
+# }
+##########################################################
+# Python (конвертированный, исправленный код)
+# Список исправлений: не знаю как в JAVA, но в Python делить список или массив, как в вашем случае, на число, не стоит - делайте это в цикле ;)
+##########################################################
+# try:
+#    d = 0
+#    arr = 8
+#    catchedRes1 = arr / d
+#    print(f"catchedRes1 = {catchedRes1}")
+# except ArithmeticError as e:
+#    print(f"Catching exception: {e}")
+##########################################################
+
+# Задание 3: Дан следующий код, исправьте его там, где требуется
+# JAVA исходник:
+##########################################################
+# public static void main(String[] args) throws Exception {
+#    try {
+#        int a = 90;
+#        int b = 3;
+#        System.out.println(a / b);
+#        printSum(23, 234);
+#        int[] abc = { 1, 2 };
+#        abc[3] = 9;
+#    } catch (Throwable ex) {
+#        System.out.println("Что-то пошло не так...");
+#    } catch (NullPointerException ex) {
+#        System.out.println("Указатель не может указывать на null!");
+#    } catch (IndexOutOfBoundsException ex) {
+#        System.out.println("Массив выходит за пределы своего размера!");
+#    }
+# }
+# public static void printSum(Integer a, Integer b) throws FileNotFoundException {
+#    System.out.println(a + b);
+# }
+##########################################################
+# Python (конвертированный, исправленный код)
+# Список исправлений: я не особо силен в JAVA, но мне кажется в первую функцию main  String[] args не должны передаваться,
+# не вижу в них смысла, ведь все данные для проверки у нас заданы, внутри функции. Кроме этого не вижу явных проблем.
+# Внутри try блока сначала делятся 2 интовых значения - выводятся в принт, дальше выводится сумма 2 чисел, вроде тоже ок,
+# дальше объявлен массив и пытаются на 3 индекс поставить значение - не знаю как в JAVA питон тут отрабатывает  IndexError,
+# выход за предел массива. Не понимаю где ошибка. Буду рад вашим комментариям по этому заданию. Спасибо.
+# def main():
+#     try:
+#        a = 90
+#        b = 3
+#        print(a / b)
+#        printSum = [23, 234]
+#        print(sum(printSum))
+#        abc = [1,2]
+#        abc[3] = 9
+#     except Exception as ex:
+#            print("Что-то пошло не так...")
+#     except IndexError as ex:
+#            print("Массив выходит за пределы своего размера!")
+# def printSum(a, b):
+#     print(a + b)
+
+# Задание 4: Разработайте программу, которая выбросит Exception, когда пользователь вводит пустую строку.
+# Пользователю должно показаться сообщение, что пустые строки вводить нельзя!!!
+# def is_val(value):
+#     if value != '':
+#         return True
+#     else:
+#         return f'ERROR: You have sent an empty value. Try again!'
+# print('••• Program initialization •••')
+# val = input('Please,input value: ')
+# while is_val(val) != True:
+#     print(f'{is_val(val)}')
+#     val = input('Please,input value: ')
+# print(f'Congratulations, you have entered the value : {val}')
